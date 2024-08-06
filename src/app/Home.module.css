@@ -1,0 +1,148 @@
+
+.container {
+  font-family: Arial, sans-serif;
+  height: 875px;
+  background-color:rgb(45, 43, 43);
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+ 
+  padding-bottom: 10px;
+
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4500;
+}
+
+.search {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.search input {
+  width: 20%;
+  padding: 5px;
+  font-size: 16px;
+}
+.navItem{
+  margin: 20px;
+}
+.onboarding {
+  background-color: #7bc96f;
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.onboarding button {
+  background-color: #fff;
+  border: none;
+  color: #7bc96f;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.main {
+  padding: 20px 0;
+}
+
+.breadcrumb {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.info h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.info p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.visit, .upvote {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+  color: rgb(62, 53, 53);
+}
+
+.visit:hover, .upvote:hover {
+  background-color: #ff4500;
+
+}
+
+.upvote {
+  background-color: #ff4500;
+
+}
+
+
+
+/* Add this to your Home.module.css file */
+
+.upvoteButton {
+  background-color: white;
+  color: grey;
+  cursor: pointer;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  height: 26px;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 45px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  position: relative;
+  background-image: url('https://ph-static.imgix.net/upvote-burst-2022-big-button.png?auto=compress,format');
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+}
+
+.upvoted {
+  animation: arrow-burst 0.8s steps(28) forwards;
+  background-color: #ff6154;
+  color: #fff;
+}
+
+@keyframes arrow-burst {
+  0% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
