@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <div className={styles.actions}>
             <button className={styles.visit}>Visit</button>
-            <StyledButton  onClick={handleUpvote} isUpvoted={isUpvoted}>
+            <StyledButton  onClick={handleUpvote}>
               {isUpvoted?"UPVOTED":"UPVOTE"} {upvotes}
             </StyledButton>
           </div>
