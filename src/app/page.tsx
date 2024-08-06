@@ -4,7 +4,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import styles from './Home.module.css';
 import { useState } from 'react';
-
+let up = true
 export default function Home() {
   const [upvotes, setUpvotes] = useState(19);
   const [isUpvoted, setIsUpvoted] = useState(false);
@@ -12,6 +12,7 @@ export default function Home() {
   const handleUpvote = () => {
     setUpvotes(isUpvoted ? upvotes - 1 : upvotes + 1);
     setIsUpvoted(!isUpvoted);
+    up = isUpvoted
   };
 
   return (
@@ -69,8 +70,8 @@ const StyledButton = styled.button`
   width: 100%;
   min-width: 224px;
   padding: 20px;
-  background-color: ${({ isUpvoted }) => (isUpvoted ?  'white':'#ff6154' )};
-  color: ${({ isUpvoted }) => (isUpvoted ?'grey':'#fff' )};
+  background-color: ${({ isUpvoted }:any) => (isUpvoted ?  'white':'#ff6154' )};
+  color: ${({ isUpvoted }:any) => (isUpvoted ?'grey':'#fff' )};
   text-align: center;
   appearance: none;
   outline: none;
@@ -82,7 +83,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   border: 1px solid #ff4500;
   &:hover {
-    background-color: ${({ isUpvoted }) => (isUpvoted ? '#ff7a69' : '#f0f0f0')};
-    color: ${({ isUpvoted }) => (isUpvoted ? '#fff' : 'grey')};
+    background-color: ${({ isUpvoted }:any) => (isUpvoted ? '#ff7a69' : '#f0f0f0')};
+    color: ${({ isUpvoted }:any) => (isUpvoted ? '#fff' : 'grey')};
   }
 `;
