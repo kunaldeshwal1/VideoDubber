@@ -28,7 +28,6 @@ export default function Home() {
             <li style={{ margin: '30px' }}>Products</li>
             <li style={{ margin: '30px' }}>News</li>
             <li style={{ margin: '30px' }}>Community</li>
-            <li style={{ margin: '30px' }}>Advertise</li>
           </ul>
         </nav>
         <div className={styles.logo}></div>
